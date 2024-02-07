@@ -11,11 +11,28 @@ jobs:
          - image: cimg/base:stable
         steps:
           - run: echo Adios
+  fallo:
+      docker:
+        - image: cimg/base:stable
+      steps:
+        - run: hola
 
 workflows:
     proceso:
          jobs:
-           - saludo
+           - fallo:
+              name: Saludo fallido
            - despedida:
               requires:
-                - saludo
+                - fallo
+workflow2:
+   proceso2:
+    jobs:
+      - saludo
+      - aprueba:
+          type: approval
+          requires:
+            - saludo
+      - despedida:
+          requires:
+            - aprueba
