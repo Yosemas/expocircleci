@@ -24,7 +24,7 @@ workflows:
            - despedida:
               requires:
                 - fallo
-workflow2:
+workflows2:
    proceso2:
     jobs:
       - saludo
