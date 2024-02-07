@@ -18,15 +18,13 @@ jobs:
         - run: hola
 
 workflows:
-  workflow1:
-    proceso:
+  proceso:
          jobs:
            - fallo
            - despedida:
               requires:
                 - fallo
-  workflow2:
-   proceso2:
+  proceso2:
     jobs:
       - saludo
       - aprueba:
