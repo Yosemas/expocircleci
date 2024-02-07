@@ -2,17 +2,17 @@ version: 2.1
 jobs:
   saludo:
     docker:
-      image: cimg/base:stable
+        image: cimg/base:stable
     steps:
-       - run: echo Hola
+         - run: echo Hola
   despedida:
-    docker:
-      image: cimg/base:stable
-    steps:
-      - run: echo Adios
+        docker:
+          image: cimg/base:stable
+        steps:
+          - run: echo Adios
 
 workflows:
-  proceso:
-   jobs:
-     - saludo
-     - despedida
+    proceso:
+         jobs:
+           - saludo
+           - despedida
