@@ -1,0 +1,18 @@
+version: 2.6
+jobs:
+  saludo:
+    docker:
+      image: cimg/stable
+    steps:
+       - run: echo Hola
+  despedida:
+    docker:
+      image: cimg/stable
+    steps:
+      - run: echo Adios
+
+workflows:
+  proceso:
+   jobs:
+     - saludo
+     - despedida
