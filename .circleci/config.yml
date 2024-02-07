@@ -20,8 +20,7 @@ jobs:
 workflows:
     proceso:
          jobs:
-           - fallo:
-              name: Saludo fallido
+           - fallo
            - despedida:
               requires:
                 - fallo
