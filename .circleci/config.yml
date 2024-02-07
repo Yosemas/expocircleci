@@ -16,4 +16,6 @@ workflows:
     proceso:
          jobs:
            - saludo
-           - despedida
+           - despedida:
+              requires:
+                - saludo
